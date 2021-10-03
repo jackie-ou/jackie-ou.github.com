@@ -1,4 +1,5 @@
  body{
+    background-color: honeydew;
     width: 1366px;
     height: 768px;
     /* If the browser window is less than 800 or 900 pixels wide, the user will have a horizontal scrollbar. */
@@ -16,16 +17,20 @@ ul{
 .center{
     display: flex;
     justify-content: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #container{
     display: flex;
     justify-content: space-around;
     padding: 50px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
 footer{
     display: flex;
     justify-content: space-evenly;
+    font-family: 'Montserrat', sans-serif;
 }
+
