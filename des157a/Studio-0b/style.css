@@ -1,3 +1,14 @@
-/* Remove all of the bullets for the lists using list-style-type: none in the CSS.
-Make the list items (of all columns above) into empty links by adding <a href=""> after each <li>. You will activate each link as you complete the work within the quarter. */
- 
+ body{
+    width: 1366px;
+    height: 768px;
+    /* If the browser window is less than 800 or 900 pixels wide, the user will have a horizontal scrollbar. */
+}
+
+#banner{
+    width: 1100px;
+    height: 250px;
+}
+
+ul{
+    list-style-type: none;
+}
