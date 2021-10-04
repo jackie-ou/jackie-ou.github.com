@@ -5,7 +5,7 @@
     height: 768px;
     background-size: 400% 400%;
     position: relative;
-    animation: change 10s ease-in-out infinite;
+    animation: change 20s ease-in-out infinite;
     /* If the browser window is less than 800 or 900 pixels wide, the user will have a horizontal scrollbar. */
 }
 
@@ -39,6 +39,7 @@ li{
     justify-content: center;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
+    font-size: 20px;
 }
 
 #container{
@@ -66,3 +67,83 @@ a:visited {
     background-color: transparent;
     text-decoration: none;
   }
+
+#ball {
+    height: 150px;
+    width: 150px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    animation: sun-moon 20s ease-in-out infinite;
+}
+
+#square{
+    width:50px;
+    height:50px;
+    background-color: #fff;
+    transform: rotate(45deg);
+    margin: 50px;
+}
+
+#square:hover{
+    transform: rotate(2475deg);
+    background-color: yellow;
+    transition: all 2s ease-out;
+}
+
+#triangle {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 50px solid #fff;
+}
+
+#triangle:hover{
+    transform: scale(2);
+    transition: all 2s ease-out;
+}
+
+.row{
+    display: flex;
+    justify-content: space-around;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@keyframes sun-moon{
+    0%{
+        background-color: #fff;
+    }
+    50%{
+        background-color: #FFC19F;
+    }
+    100%{
+        background-color: #fff;
+    }
+}
+
+#ball:hover{
+    transform: rotateY(2205deg);
+    transition: all 5s ease-out;
+    cursor: pointer;
+}
+
+#left-column{
+    border: 3px solid #fff;
+    padding: 5rem 5rem;
+}
+
+#middle-column{
+    border: 3px solid #fff;
+    padding: 5rem 5rem;
+}
+
+#right-column{
+    border: 3px solid #fff;
+    padding: 5rem 5rem;
+}
