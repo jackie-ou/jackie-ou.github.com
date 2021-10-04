@@ -1,8 +1,24 @@
  body{
-    background-color: honeydew;
+    background: linear-gradient(-45deg, #FFC19F, #F09F9C, #C86B98,#642B6B,#1d0f36,#270F36);
+    color: #fff;
     width: 1366px;
     height: 768px;
+    background-size: 400% 400%;
+    position: relative;
+    animation: change 10s ease-in-out infinite;
     /* If the browser window is less than 800 or 900 pixels wide, the user will have a horizontal scrollbar. */
+}
+
+@keyframes change {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
 }
 
 #banner{
@@ -14,10 +30,15 @@ ul{
     list-style-type: none;
 }
 
+li{
+    color: #fff;
+}
+
 .center{
     display: flex;
     justify-content: center;
     font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
 }
 
 #container{
@@ -34,3 +55,14 @@ footer{
     font-family: 'Montserrat', sans-serif;
 }
 
+a:link {
+    color: #fff;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #fff;
+    background-color: transparent;
+    text-decoration: none;
+  }
