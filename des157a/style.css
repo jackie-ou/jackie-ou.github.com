@@ -8,6 +8,7 @@
     animation: change 20s ease-in-out infinite;
     /* If the browser window is less than 800 or 900 pixels wide, the user will have a horizontal scrollbar. */
     min-width: 900px;
+    margin: 0 auto;
 }
 
 @keyframes change {
