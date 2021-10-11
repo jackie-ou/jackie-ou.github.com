@@ -1,0 +1,36 @@
+#title{
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 600px;
+    margin: auto;
+}
+
+#red{
+    background-color: red;
+    height: 300px;
+    width: 300px;
+}
+
+#green{
+    background-color: green;
+    height: 300px;
+    width: 300px;
+}
+
+#blue{
+    background-color: blue;
+    height: 300px;
+    width: 300px;
+}
+
+#yellow{
+    background-color: yellow;
+    height: 300px;
+    width: 300px;
+}

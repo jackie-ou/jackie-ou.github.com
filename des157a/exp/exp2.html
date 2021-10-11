@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Experimentation - Functions & DOM</title>
+    <link rel="stylesheet" href="exp2.css">
+</head>
+<body>
+    <h1 id="title">Try to guess what color the computer picks</h1>
+    <div class="container">
+        <div id="red"></div>
+        <div id="green"></div>
+        <div id="blue"></div>
+        <div id="yellow"></div>
+    </div>
+    <div class="container">
+        <div class="container">
+            <p id="chose">Your Choice: </p>
+        </div>
+        <div class="container">
+            <p id="answer">Computer's Choice: </p>
+        </div>
+        <div class="container">
+            <p id="msg">Welcome to the game!</p>
+        </div>
+    </div>
+    <!-- Prompt the user for a color that the computer is "thinking of" 
+        - either red, yellow, green, or blue. Then pick a random color from an array. 
+        If the color entered by the user matches the color picked by the program, 
+        it displays the output message "You are right!". Otherwise, it displays 
+        "Try again!". (Credit: Krithika Govind) -->
+    <script>
+        let chose = document.getElementById("chose");
+        let answer = document.getElementById("answer");
+        let msg = document.getElementById("msg");
+
+        let response = prompt("What color is the computer thinking of? (red, green, blue, yellow)");
+        chose.innerHTML = `Your Choice: ${response}`;
+        function randomInt(min, max){
+            return Math.floor((max-min+1) * Math.random() + min);
+        }
+        let colorIndex = randomInt(0,3);
+        let colors = ["red","green","blue","yellow"];
+        let correctColor = colors[colorIndex];
+        answer.innerHTML = `Computer's Choice: ${correctColor}`;
+        if(response == correctColor){
+            msg.innerHTML = "You are right!";
+        }
+        else if(response == null || response == ""){
+            chose.innerHTML = "You did not choose a color!";
+            msg.innerHTML = "Try again!";
+        }
+        else{
+            msg.innerHTML = "Try again!";
+        }
+    </script>
+</body>
+</html>
