@@ -32,12 +32,16 @@
         it displays the output message "You are right!". Otherwise, it displays 
         "Try again!". (Credit: Krithika Govind) -->
     <script>
+        // Initialize variables for DOM
         let chose = document.getElementById("chose");
         let answer = document.getElementById("answer");
         let msg = document.getElementById("msg");
 
+        // Prompt the user and then update HTML
         let response = prompt("What color is the computer thinking of? (red, green, blue, yellow)");
         chose.innerHTML = `Your Choice: ${response}`;
+
+        // Randomly pick the computer's choice and update HTML
         function randomInt(min, max){
             return Math.floor((max-min+1) * Math.random() + min);
         }
@@ -45,6 +49,8 @@
         let colors = ["red","green","blue","yellow"];
         let correctColor = colors[colorIndex];
         answer.innerHTML = `Computer's Choice: ${correctColor}`;
+
+        // Check if win and update HTML
         if(response == correctColor){
             msg.innerHTML = "You are right!";
         }
