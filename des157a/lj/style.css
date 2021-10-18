@@ -8,12 +8,14 @@ body{
 
 h1{
     text-align: center;
+    font-size: 40px;
 }
 
 main, .container{
     display:flex;
     justify-content: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Playfair Display', serif;
+
 }
 
 #left, #right{
@@ -22,12 +24,23 @@ main, .container{
     flex-direction: column;
     flex: 1;
     padding: 20px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+}
+
+#title{
+    padding-left: 95px;
+}
+
+p{
+    width: 70%;
+    line-height: 25px;
 }
 
 footer{
     display: flex;
     justify-content: space-evenly;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Playfair Display', serif;
     padding-bottom: 25px;
+    font-size: 12px;
 }
