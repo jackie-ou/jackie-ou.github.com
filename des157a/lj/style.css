@@ -11,14 +11,14 @@ h1{
     font-size: 40px;
 }
 
-main, .container{
+.container{
     display:flex;
     justify-content: center;
     font-family: 'Playfair Display', serif;
 
 }
 
-#left, #right{
+.left{
     display:flex;
     justify-content: center;
     flex-direction: column;
@@ -26,6 +26,20 @@ main, .container{
     padding: 20px;
     font-family: 'Playfair Display', serif;
     font-size: 14px;
+}
+
+.right{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+}
+
+article{
+    display: flex;
 }
 
 #title{
