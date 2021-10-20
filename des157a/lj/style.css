@@ -42,7 +42,7 @@ article{
     display: flex;
 }
 
-#title{
+.title{
     padding-left: 95px;
 }
 
