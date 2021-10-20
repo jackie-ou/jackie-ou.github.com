@@ -1,0 +1,62 @@
+body{
+    width: 1366px;
+    height: 768px;
+    position: relative;
+    min-width: 900px;
+    margin: auto;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    border: solid ;
+}
+
+.col-container{
+    display: flex;
+    flex-direction: column;
+}
+
+#madlib{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+.inbox{
+    display: flex;
+    padding: 5px;
+}
+
+p{
+    padding: 5px;
+}
+
+.inbox-left{
+    display: flex;
+    /* border: 2px solid red; */
+    width: 20%;
+}
+
+.inbox-right{
+    display: flex;
+    /* border: 2px solid blue; */
+    width: 70%;
+}
+
+input {
+    width: 100%;
+}
+
+#signin, #generate, #name{
+    width: auto;
+}
+
+#close{ 
+    background-color: transparent;
+    border: transparent;
+}
+
+#close:hover, #generate:hover, #signin:hover{
+    cursor: pointer;
+}

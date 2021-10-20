@@ -5,29 +5,108 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Build Mad Lib Script</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <!-- fonts here -->
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
+    <!-- Overlay -->
     <header>
-        <h1>Build a Mad Lib Script</h1>
+        <h1>Skip Class Excuse Generator</h1>
+    </header>
+    <p>[COMPANY]</p>
+    <p>One account. All of [COMPANY]</p>
+    <p>Sign in to continue to [COMPANY]</p>
+    <form id=login>
+        <div class="inbox">
+            <div class="inbox-left">
+                <label for="name">Enter name</label>
+            </div>
+            <div class="inbox-right">
+                <input type="text" id="name" required>
+            </div>
+        </div>
+    </form>
+        <div class="inbox">
+            <div class="inbox-left">
+                Enter password:
+            </div>
+        <div class="inbox-right">
+            *********
+        </div>
+    </div>
+        <input id="signin" type="submit" value="Sign in">
+
+
+    <!-- Main page -->
+    <header>
+        <h1>Skip Class Excuse Generator</h1>
     </header>
     <main>
         <form id="myForm">
-            <label for="noun1">Provide a Noun</label>
-            <input type="text" id="noun1" required>
-
-            <label for="noun2">Provide a Noun</label>
-            <input type="text" id="noun2" required>
-
-            <label for="adj1">Provide a Adjective</label>
-            <input type="text" id="adj1" required>
-
-            <label for="verb1">Provide a Verb</label>
-            <input type="text" id="verb1" required>
-
-            <input type="submit" value="Send">
+            <div class="inbox">
+                <div class="inbox-left">
+                    <label for="adj1">Enter adjective</label>
+                </div>
+                <div class="inbox-right">
+                    <input type="text" id="adj1" required>
+                </div>
+            </div>
+            <div class="inbox">
+                <div class="inbox-left">
+                    <label for="noun1">Enter noun</label>
+                </div>
+                <div class="inbox-right">
+                    <input type="text" id="noun1" required>
+                </div>
+            </div>
+            <div class="inbox">
+                <div class="inbox-left">
+                    <label for="noun2">Enter noun</label>
+                </div>
+                <div class="inbox-right">
+                    <input type="text" id="noun2" required>    
+                </div>
+            </div>
+            <div class="inbox">
+                <div class="inbox-left">
+                    <label for="verb1">Enter verb</label>
+                </div>
+                <div class="inbox-right">
+                    <input type="text" id="verb1" required>    
+                </div>
+            </div>
+            <div class="inbox">
+                <div class="inbox-left">
+                    <label for="noun3">Enter verb</label>
+                </div>
+                <div class="inbox-right">
+                    <input type="text" id="noun3" required>
+                </div>
+            </div>
+            <input id="generate" type="submit" value="Generate Email">
         </form>
-        <article id="madlib"></article>
+
+        <!-- MadLib -->
+        <header>
+            <h1>MadLib</h1>
+        </header>
+        <article id="madlib">
+            <div class="container">
+                <p>New Message</p>
+                <button id="close">&xotime;</button>
+            </div> 
+            <div class="container">
+                <p>To: </p>
+            </div>
+            <div class="container">
+                <p>Subject: </p>
+            </div>
+            <div class="container">
+                <p>generate story here</p>
+            </div>
+        </article>
     </main>
     <footer>
     </footer>
