@@ -4,6 +4,7 @@ body{
     position: relative;
     min-width: 900px;
     margin: auto;
+    font-family: 'Comfortaa', cursive;
 }
 
 .container{
@@ -20,15 +21,11 @@ body{
 #madlib{
     display: flex;
     flex-direction: column;
-    width: 25%;
+    width: 100%;
 }
 
 .inbox{
     display: flex;
-    padding: 5px;
-}
-
-p{
     padding: 5px;
 }
 
@@ -59,4 +56,39 @@ input {
 
 #close:hover, #generate:hover, #signin:hover{
     cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
+
+.show{
+    display: flex;
+}
+
+.splash{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin: auto;
+    border-color: black;
+    border: black solid;
+    padding: 15px;
+    line-height: 20px;
+}
+
+#signin{
+    width: fit-content;
+}
+
+#left{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+}
+
+#right{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
 }

@@ -7,106 +7,117 @@
     <title>Build Mad Lib Script</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <!-- fonts here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Overlay -->
-    <header>
-        <h1>Skip Class Excuse Generator</h1>
-    </header>
-    <p>[COMPANY]</p>
-    <p>One account. All of [COMPANY]</p>
-    <p>Sign in to continue to [COMPANY]</p>
-    <form id=login>
-        <div class="inbox">
-            <div class="inbox-left">
-                <label for="name">Enter name</label>
-            </div>
-            <div class="inbox-right">
-                <input type="text" id="name" required>
-            </div>
-        </div>
-    </form>
-        <div class="inbox">
-            <div class="inbox-left">
-                Enter password:
-            </div>
-        <div class="inbox-right">
-            *********
-        </div>
-    </div>
-        <input id="signin" type="submit" value="Sign in">
-
-
-    <!-- Main page -->
-    <header>
-        <h1>Skip Class Excuse Generator</h1>
-    </header>
     <main>
-        <form id="myForm">
+<!-- 
+        <section class="splash">
+            <header>
+                <h1>Skip Class Excuse Generator</h1>
+            </header>
+            <p>Welcome to cowMail</p>
+            <p>Skip Class Excuse Generator</p>
+            <p>Sign in to continue to cowMail:</p>
+            <form id=login>
+                <div class="inbox">
+                    <div class="inbox-left">
+                        <label for="name">Enter name</label>
+                    </div>
+                    <div class="inbox-right">
+                        <input type="text" id="name" required>
+                    </div>
+                </div>
+            </form>
             <div class="inbox">
                 <div class="inbox-left">
-                    <label for="adj1">Enter adjective</label>
+                    Enter password:
                 </div>
                 <div class="inbox-right">
-                    <input type="text" id="adj1" required>
+                    *********
                 </div>
             </div>
-            <div class="inbox">
-                <div class="inbox-left">
-                    <label for="noun1">Enter noun</label>
+            <button id="signin">Sign in</button>
+        </section>
+         -->
+        <section class="show">
+            <div id="left">
+                <!-- Main page -->
+            <header>
+                <h1>Skip Class Excuse Generator</h1>
+            </header>
+            <form id="myForm">
+                <div class="inbox">
+                    <div class="inbox-left">
+                        <label for="adj1">Enter adjective</label>
+                    </div>
+                    <div class="inbox-right">
+                        <input type="text" id="adj1" required>
+                    </div>
                 </div>
-                <div class="inbox-right">
-                    <input type="text" id="noun1" required>
+                <div class="inbox">
+                    <div class="inbox-left">
+                        <label for="noun1">Enter noun</label>
+                    </div>
+                    <div class="inbox-right">
+                        <input type="text" id="noun1" required>
+                    </div>
                 </div>
+                <div class="inbox">
+                    <div class="inbox-left">
+                        <label for="noun2">Enter noun</label>
+                    </div>
+                    <div class="inbox-right">
+                        <input type="text" id="noun2" required>    
+                    </div>
+                </div>
+                <div class="inbox">
+                    <div class="inbox-left">
+                        <label for="verb1">Enter verb</label>
+                    </div>
+                    <div class="inbox-right">
+                        <input type="text" id="verb1" required>    
+                    </div>
+                </div>
+                <div class="inbox">
+                    <div class="inbox-left">
+                        <label for="noun3">Enter verb</label>
+                    </div>
+                    <div class="inbox-right">
+                        <input type="text" id="noun3" required>
+                    </div>
+                </div>
+                <input id="generate" type="submit" value="Generate Email">
+            </form>
             </div>
-            <div class="inbox">
-                <div class="inbox-left">
-                    <label for="noun2">Enter noun</label>
+            <div id="right">
+                <!-- MadLib -->
+            <header>
+                <h1>MadLib</h1>
+            </header>
+            <article id="madlib">
+                <div class="container">
+                    <p>New Message</p>
+                    <button id="close">&xotime;</button>
+                </div> 
+                <div class="container">
+                    <p>To: </p>
                 </div>
-                <div class="inbox-right">
-                    <input type="text" id="noun2" required>    
+                <div class="container">
+                    <p>Subject: </p>
                 </div>
-            </div>
-            <div class="inbox">
-                <div class="inbox-left">
-                    <label for="verb1">Enter verb</label>
+                <div class="container">
+                    <p id="story">
+                        Generate Story Here
+                    </p>
                 </div>
-                <div class="inbox-right">
-                    <input type="text" id="verb1" required>    
-                </div>
+            </article>
             </div>
-            <div class="inbox">
-                <div class="inbox-left">
-                    <label for="noun3">Enter verb</label>
-                </div>
-                <div class="inbox-right">
-                    <input type="text" id="noun3" required>
-                </div>
-            </div>
-            <input id="generate" type="submit" value="Generate Email">
-        </form>
-
-        <!-- MadLib -->
-        <header>
-            <h1>MadLib</h1>
-        </header>
-        <article id="madlib">
-            <div class="container">
-                <p>New Message</p>
-                <button id="close">&xotime;</button>
-            </div> 
-            <div class="container">
-                <p>To: </p>
-            </div>
-            <div class="container">
-                <p>Subject: </p>
-            </div>
-            <div class="container">
-                <p>generate story here</p>
-            </div>
-        </article>
+        </section>
     </main>
     <footer>
     </footer>
