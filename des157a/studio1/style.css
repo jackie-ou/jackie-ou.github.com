@@ -11,6 +11,7 @@ body{
     display: flex;
     justify-content: space-between;
     border: solid ;
+    padding: 10px;
 }
 
 .col-container{
@@ -18,7 +19,7 @@ body{
     flex-direction: column;
 }
 
-#madlib{
+.madlib{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -26,7 +27,7 @@ body{
 
 .inbox{
     display: flex;
-    padding: 5px;
+    padding: 10px;
 }
 
 .inbox-left{
@@ -64,6 +65,7 @@ input {
 
 .show{
     display: flex;
+    flex-direction: column;
 }
 
 .splash{
@@ -87,8 +89,38 @@ input {
     flex-direction: column;
 }
 
+#bottom{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
 #right{
     display: flex;
     width: 50%;
     flex-direction: column;
+}
+
+#story{
+    line-height: 40px;
+}
+
+#img{
+    width: 70px;
+}
+
+nav{
+    width: 100%;
+}
+
+#box{
+    display: flex;
+}
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Comfortaa', cursive;
+    padding-bottom: 25px;
+    font-size: 12px;
 }
