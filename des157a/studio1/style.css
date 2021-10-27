@@ -1,6 +1,10 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
-    width: 1366px;
-    height: 740px;
+    max-width: 1366px;
+    max-height: 768px;
     position: relative;
     min-width: 900px;
     margin: auto;
@@ -118,14 +122,13 @@ nav{
     margin: 40px;
 }
 
-header{
+#title{
     margin-left: 40px;
 }
 
 #box{
     display: flex;
     flex-wrap: wrap;
-    height: 768px;
     justify-content: flex-end;
 }
 
@@ -136,15 +139,14 @@ footer{
     line-height: 20px;
     margin: 40px;
     font-family: 'Comfortaa', cursive;
-    padding-bottom: 25px;
     font-size: 12px;
-
 }
 
 #row{
     display: flex;
     justify-content: space-between;
     width: 100%;
+    margin-top: 40px;
 }
 
 a:link {
