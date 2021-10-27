@@ -8,6 +8,7 @@
     let story = document.getElementById("story");
     let to = document.getElementById("to");
     let subject = document.getElementById("subject");
+    let composeBox = document.getElementById("bottom");
 
     document.querySelector('#signin').addEventListener('click', function() {
         sections[0].className = "hidden";
@@ -18,6 +19,8 @@
         event.preventDefault();
         let formData = document.querySelectorAll("input[type=text]");
         processData(formData);
+        composeBox.style.visibility = "visible";
+
 
         // clear form
         formData = document.querySelectorAll("input[type=text]");

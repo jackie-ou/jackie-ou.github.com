@@ -27,7 +27,13 @@ body{
 
 .inbox{
     display: flex;
-    padding: 10px;
+    padding-left: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#btn1{
+    margin-left: 80px;
 }
 
 .inbox-left{
@@ -96,10 +102,11 @@ input {
     flex-direction: column;
     max-width: 500px;
     min-width: 500px;
+    visibility: hidden;
 }
 
 #story{
-    line-height: 40px;
+    line-height: 20px;
 }
 
 #img{
@@ -108,6 +115,11 @@ input {
 
 nav{
     width: 100%;
+    margin: 40px;
+}
+
+header{
+    margin-left: 40px;
 }
 
 #box{
@@ -119,8 +131,30 @@ nav{
 
 footer{
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: flex-end;
+    line-height: 20px;
+    margin: 40px;
     font-family: 'Comfortaa', cursive;
     padding-bottom: 25px;
     font-size: 12px;
+
 }
+
+#row{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+a:link {
+    color: gray;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: gray;
+    background-color: transparent;
+    text-decoration: none;
+  }
