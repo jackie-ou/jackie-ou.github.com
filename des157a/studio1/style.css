@@ -84,23 +84,18 @@ input {
     width: fit-content;
 }
 
-#left{
+#top{
     display: flex;
-    width: 50%;
+    width: 100%;
     flex-direction: column;
 }
 
 #bottom{
     display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-}
-
-#right{
-    display: flex;
-    width: 50%;
-    flex-direction: column;
     justify-content: flex-end;
+    flex-direction: column;
+    max-width: 500px;
+    min-width: 500px;
 }
 
 #story{
@@ -117,7 +112,9 @@ nav{
 
 #box{
     display: flex;
+    flex-wrap: wrap;
     height: 768px;
+    justify-content: flex-end;
 }
 
 footer{
