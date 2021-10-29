@@ -32,8 +32,8 @@ body{
 .inbox{
     display: flex;
     padding-left: 80px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 11px;
+    padding-bottom: 5px;
 }
 
 #btn1{
@@ -49,6 +49,7 @@ body{
 .inbox-right{
     display: flex;
     /* border: 2px solid blue; */
+    margin-left: 10px;
     width: 70%;
 }
 
@@ -76,6 +77,8 @@ input {
 .show{
     display: flex;
     flex-direction: column;
+    height: 768px;
+    overflow: hidden;
 }
 
 .splash{
@@ -111,19 +114,19 @@ input {
 
 #story{
     line-height: 20px;
-}
-
-#img{
-    width: 70px;
+    font-size: 12px;
 }
 
 nav{
     width: 100%;
-    margin: 40px;
+    margin-left: 40px;
+    margin-top: 20px;
 }
 
 #title{
     margin-left: 40px;
+    margin-top: 10px;
+    color: rgb(8,110,255);
 }
 
 #box{
@@ -146,7 +149,8 @@ footer{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-top: 40px;
+    position: absolute;
+    bottom: 0px;
 }
 
 a:link {
@@ -160,3 +164,9 @@ a:visited {
     background-color: transparent;
     text-decoration: none;
   }
+
+.img{
+    border-style:solid;
+    border-color: rgb(8,110,255);
+    width: 70px;
+}
