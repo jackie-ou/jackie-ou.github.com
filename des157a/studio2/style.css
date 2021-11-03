@@ -3,7 +3,7 @@
 }
 
 body {
-	font-family: Arial;
+	font-family: "Helvetica Neue";
 	color: #333;
 }
 
@@ -14,7 +14,7 @@ main {
 
 section {
 	height: 100vh;
-	opacity: 0.75;
+	opacity: 0.99;
 }
 
 p {
@@ -43,16 +43,15 @@ figure img {
 }
 
 .sect1{
-	width: 100%; /*147% the height of the image is the width ratio*/
+	width: 100%; /*100% the height of the image is the width ratio*/
 	top:0;
 	left: 50%;
 	transform:translateX(-50%);
-	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-family: "Helvetica Neue";
 }
 
 h1{
-	font-family: Georgia, 'Times New Roman', Times, serif;
-	background-color: white;
+	font-family: "Helvetica Neue";
 }
 
 .sect2,
@@ -75,6 +74,16 @@ h1{
 
 .sect4 {
     top: calc(-900px + 100vh);
-    left: calc(-2450px + 70vw);
+    left: calc(-2050px + 70vw);
 }
 
+a img:last-child {
+	display: none;  
+  }
+  a:hover img:last-child {
+	display: block;  
+	cursor: pointer;
+  }
+  a:hover img:first-child {
+	display: none;  
+  }
