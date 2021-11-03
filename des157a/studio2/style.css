@@ -14,6 +14,7 @@ main {
 
 section {
 	height: 100vh;
+	opacity: 0.75;
 }
 
 p {
@@ -22,25 +23,36 @@ p {
 
 figure {
 	display: block;
-	margin: 0;
-	width: 70vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 	position: fixed;
-	top:0;
-	right:0;
-	overflow: hidden;
+	right: 0px;
+	bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
+
+
 
 figure img {
 	position: absolute;
 	transition: all 3s ease;
+	width: 100%;
 }
 
 .sect1{
-	width: 147vh; /*147% the height of the image is the width ratio*/
+	width: 100%; /*147% the height of the image is the width ratio*/
 	top:0;
 	left: 50%;
 	transform:translateX(-50%);
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1{
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	background-color: white;
 }
 
 .sect2,
@@ -52,27 +64,17 @@ figure img {
 }
 
 .sect2 {
-    top: 0;
-    left: 0;
+    top: calc(-2200px + 100vh);
+    left: calc(-1500px + 70vw);
 }
 
 .sect3 {
-    top: 0;
-    left: calc(-3768px + 70vw);
+    top: calc(-2200px + 100vh);
+    left: calc(-2450px + 70vw);
 }
 
 .sect4 {
-	top: calc(-2567px + 100vh);
-    left: 0;
+    top: calc(-900px + 100vh);
+    left: calc(-2450px + 70vw);
 }
 
-.sect5 {
-    top: calc(-2567px + 100vh);
-    left: calc(-3768px + 70vw);
-}
-
-.sect6 {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
