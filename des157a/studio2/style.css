@@ -19,6 +19,8 @@ section {
 
 p {
 	line-height: 1.5em;
+	font-size: 15px;
+	font-weight: bold;
 }
 
 figure {
@@ -34,7 +36,9 @@ figure {
 	margin-bottom: 0px;
 }
 
-
+#scc-out,#scc-in,#library-out,#library-in,#mu-out,#mu-in{
+	width: 369.8px;
+}
 
 figure img {
 	position: absolute;
@@ -52,6 +56,7 @@ figure img {
 
 h1{
 	font-family: "Helvetica Neue";
+	margin-top: 75px;
 }
 
 .sect2,
@@ -64,26 +69,40 @@ h1{
 
 .sect2 {
     top: calc(-2200px + 100vh);
-    left: calc(-1500px + 70vw);
+    left: calc(-1350px + 70vw);
 }
 
 .sect3 {
-    top: calc(-2200px + 100vh);
-    left: calc(-2450px + 70vw);
+    top: calc(-2100px + 100vh);
+    left: calc(-2350px + 70vw);
 }
 
 .sect4 {
-    top: calc(-900px + 100vh);
-    left: calc(-2050px + 70vw);
+    top: calc(-800px + 100vh);
+    left: calc(-2150px + 70vw);
 }
 
 a img:last-child {
 	display: none;  
-  }
-  a:hover img:last-child {
+}
+
+a:hover img:last-child {
 	display: block;  
 	cursor: pointer;
-  }
-  a:hover img:first-child {
+}
+
+a:hover img:first-child {
 	display: none;  
-  }
+}
+
+a:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
