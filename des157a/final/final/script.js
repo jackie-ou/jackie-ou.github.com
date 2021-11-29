@@ -59,15 +59,18 @@
         })
 
         // Help
+        let opened = false;
         document.getElementById('help').addEventListener("click",function(){
-            directions.className = "directions-overlay";
+            if(!opened){
+                directions.className = "directions-overlay";
+            }
+            else{
+                directions.className = "hidden";
+                console.log('click')
+            }
+            opened = !opened;
         });
 
-        document.getElementById('directions').addEventListener("click",function(){
-            directions.className = "hidden";
-            console.log('click')
-        });
-        
     }
 
     let rolling = false;
