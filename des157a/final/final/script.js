@@ -1,8 +1,6 @@
 (function (){
     'use strict';
     console.log("reading js");
-
-    alert("Please try the following tasks:\n- Try to get Player 2 to win\n- Try to reveal/hide the directions\n- Try to intentionally roll a one");
     
     // Add Variables for DOM Elements
     const startGame = document.getElementById('startgame');
