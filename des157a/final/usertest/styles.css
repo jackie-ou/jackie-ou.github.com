@@ -1,0 +1,116 @@
+body {
+    font-family: 'Orbitron', sans-serif;
+    color: black;
+    line-height: 1.5em;
+    letter-spacing: 2px;
+    background-color: #7077A1;
+}
+
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #044c8f52;
+}
+
+footer{
+    position: relative;
+    top: 20em;
+    padding: 20px;
+}
+
+#gamecontrol{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+}
+
+#directions{
+    position: relative;
+    top: 20em;
+    padding: 20px;
+}
+
+#directions-container{
+    display: flex;
+    justify-content: center;
+}
+
+.directions-overlay{
+    display: block;
+    background-color: #FCF7F8;
+    border: black;
+    border-radius: 10px;
+    width: 500px;
+}
+
+#game-container{
+    display: flex;
+    justify-content: center;
+}
+
+#game{
+    text-align: center;
+    font-size: 20px;
+}
+
+#dice-left, #dice-right{
+    padding: 70px;
+}
+
+#actions-container{
+    display: flex;
+    justify-content: center;
+}
+
+#score-container{
+    display: flex;
+    justify-content: center;
+}
+
+#p1-score{
+    font-size: 30px;
+    color: #FCF7F8;
+    padding: 30px;
+}
+
+#p2-score{
+    font-size: 30px;
+    color: #FCF7F8;
+    padding: 30px;
+}
+
+button { 
+    padding: 10px;
+}
+
+#p1-score, #p2-score{
+    padding: 1;
+}
+
+.hidden{
+    display: none;
+}
+
+.show{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #044c8f52;
+}
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+a:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
