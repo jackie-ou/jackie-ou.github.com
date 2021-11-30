@@ -13,6 +13,8 @@
     const nav = document.querySelector("nav");
     const directions = document.getElementById("directions");
     const footer = document.querySelector("footer");
+    let currentRoll1 = 0;
+    let currentRoll2 = 0;
 
     // Keeping Track of Game Data
     const gameData = {
@@ -117,12 +119,30 @@
         } else {
             // actionArea.innerHTML = '';
             intervalObj = setInterval(function() {
-                gameData.roll1 = Math.floor(Math.random() * 6) + 1;
-                gameData.roll2 = Math.floor(Math.random() * 6) + 1;
+                if(currentRoll1 === gameData.roll1){
+                    while(currentRoll1 === gameData.roll1){
+                        gameData.roll1 = Math.floor(Math.random() * 6) + 1;
+                        console.log(`${currentRoll1} ${gameData.roll1}`);
+                    }
+                    currentRoll1 = gameData.roll1;
+                }
+                else{
+                    gameData.roll1 = Math.floor(Math.random() * 6) + 1;
+                    currentRoll1 = gameData.roll1;
+                }
+                if(currentRoll2 === gameData.roll2){
+                    while(currentRoll2 === gameData.roll2){
+                        gameData.roll2 = Math.floor(Math.random() * 6) + 1;
+                    }
+                    currentRoll2 = gameData.roll2;
+                }
+                else{
+                    gameData.roll2 = Math.floor(Math.random() * 6) + 1;
+                    currentRoll2 = gameData.roll2;
+                }
                 game.innerHTML = `<img  id="dice-left" src="${gameData.dice[gameData.roll1-1]}"><img id="dice-right" src="${gameData.dice[gameData.roll2-1]}">`;
                 gameData.rollSum = gameData.roll1 + gameData.roll2;
-
-            }, 200);
+            }, 100);
         }
         rolling = !rolling;
         
