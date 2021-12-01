@@ -46,13 +46,22 @@
         setUpTurn();
     });
 
-    let firstTime = true;
+    function updateTurn(){
+        if(gameData.index === 0){
+            document.getElementById('p1-score').style.backgroundColor = 'black';
+            document.getElementById('p2-score').style.backgroundColor = 'transparent';
+        }
+        else{
+            document.getElementById('p2-score').style.backgroundColor = 'black';
+            document.getElementById('p1-score').style.backgroundColor = 'transparent';
+        }
+    }
+
     // Set up the Turn
     function setUpTurn(){
-        if(firstTime) {
-            game.innerHTML = `<p>${gameData.players[gameData.index]}'s Turn</p>`;
-            firstTime = false;
-        }
+        // game.innerHTML = `<p>${gameData.players[gameData.index]}'s Turn</p>`;
+        updateTurn();
+
         actionArea.innerHTML = '<button id="roll">Roll the Dice</button>';
         document.getElementById('roll').addEventListener('click', function(){
             throwDice();
@@ -81,6 +90,7 @@
     let intervalObj;
     // Throwing the Dice
     function throwDice(){
+        // updateTurn();
         if(rolling) {
             clearInterval(intervalObj);
             // game.innerHTML += `<p>Roll the dice for the ${gameData.players[gameData.index]}</p>`;
@@ -91,6 +101,7 @@
                 game.innerHTML += '<p>Oh snap! Snake eyes!</p>';
                 gameData.score[gameData.index] = 0;
                 gameData.index ? (gameData.index = 0) : (gameData.index = 1);
+                updateTurn();
                 // Show the current score
                 badSound.play();
                 setTimeout(setUpTurn, 2000);
@@ -100,12 +111,14 @@
                 // switch player
                 gameData.index ? (gameData.index = 0) : (gameData.index = 1);
                 game.innerHTML += `<p>Sorry, one of your rolls was a one, switching to ${gameData.players[gameData.index]}</p>`;
+                updateTurn();
                 badSound.play();
                 setTimeout(setUpTurn, 2000);
             }
             // if neither die is a 1...
             else {
                 gameData.score[gameData.index] += gameData.rollSum;
+                updateTurn();
                 goodSound.play();
                 actionArea.innerHTML = '<button id="rollagain">Roll again</button> or <button id="pass">Pass</button>';
 
@@ -150,12 +163,18 @@
             }, 100);
         }
         rolling = !rolling;
-        
+        updateTurn();
     }
 
     function checkWinningCondition(){
         if(gameData.score[gameData.index] > gameData.gameEnd){
             score.innerHTML = `<h2>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points!</h2>`;
+            if(gameData.index === 0){
+                document.getElementById('p1-score').innerText = `Player 1: ${gameData.score[gameData.index]}`;
+            }
+            else{
+                document.getElementById('p2-score').innerText = `Player 2: ${gameData.score[gameData.index]}`;
+            }
             actionArea.innerHTML = '';
             document.getElementById('quit').innerHTML = "Start a New Game?";
         }
