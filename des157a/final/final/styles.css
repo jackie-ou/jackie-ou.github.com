@@ -14,8 +14,8 @@ nav{
 
 footer{
     position: relative;
-    top: 20em;
-    padding: 20px;
+    top: 40em;
+    padding: 10px;
 }
 
 #gamecontrol{
@@ -28,7 +28,7 @@ footer{
 #directions{
     position: relative;
     top: 20em;
-    padding: 20px;
+    width: 600px;
 }
 
 #directions-container{
@@ -55,7 +55,7 @@ footer{
 }
 
 #dice-left, #dice-right{
-    padding: 70px;
+    padding: 50px;
 }
 
 #actions-container{

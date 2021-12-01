@@ -56,7 +56,7 @@
         actionArea.innerHTML = '<button id="roll">Roll the Dice</button>';
         document.getElementById('roll').addEventListener('click', function(){
             throwDice();
-        })
+        });
 
         // Help
         let opened = false;
@@ -79,7 +79,8 @@
     function throwDice(){
         if(rolling) {
             clearInterval(intervalObj);
-            game.innerHTML += `<p>Roll the dice for the ${gameData.players[gameData.index]}</p>`;
+            // game.innerHTML += `<p>Roll the dice for the ${gameData.players[gameData.index]}</p>`;
+            // actionArea.innerHTML = '<button id="roll">Stop</button>';
             // Add the Selection Statements
             // if two 1's are rolled...
             if (gameData.rollSum === 2){
