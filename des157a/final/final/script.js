@@ -32,7 +32,7 @@
     startGame.addEventListener("click", function(){
         // randomly set game index here ...
         gameData.index = Math.round(Math.random());
-        console.log(gameData.index);
+        // console.log(gameData.index);
         gameControl.innerHTML = '<button id="quit">Quit</button><button id="help">Help</button>';
 
         // add event listener for the new button
@@ -63,10 +63,14 @@
         document.getElementById('help').addEventListener("click",function(){
             if(!opened){
                 directions.className = "directions-overlay";
+                game.className = "hidden";
+                actionArea.className = "hidden";
             }
             else{
                 directions.className = "hidden";
-                console.log('click')
+                game.className = "";
+                actionArea.className = "";
+                // console.log('click')
             }
             opened = !opened;
         });
@@ -123,7 +127,7 @@
                 if(currentRoll1 === gameData.roll1){
                     while(currentRoll1 === gameData.roll1){
                         gameData.roll1 = Math.floor(Math.random() * 6) + 1;
-                        console.log(`${currentRoll1} ${gameData.roll1}`);
+                        // console.log(`${currentRoll1} ${gameData.roll1}`);
                     }
                     currentRoll1 = gameData.roll1;
                 }
