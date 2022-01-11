@@ -11,8 +11,7 @@ body {
 }
 
 body.switch {
-    background-color: rgb(235, 235, 235);
-    color: #333;
+    background-color: #191919;
 }
 
 #container {
@@ -52,8 +51,7 @@ main {
 }
 
 main section {
-    width: 25%;
-    border: 1px rgb(235, 235, 235) dashed;
+    width: 12.5%;
     margin: 0 .25em;
     padding: 1em;
 }
@@ -80,43 +78,23 @@ section a {
     color: #191919;
 }
 
-section a:hover {
-    background-color: orange;
-    color: #333;
-}
-
-section.switch a {
-    color: #333;
-}
-
-section.switch a:hover {
-    background-color: #333;
-    color: rgb(235, 235, 235);
-}
-
 button {
     position: absolute;
     top: 20px;
     right: 20px;
     padding: 12px;
-    background-color: orange;
-    color: #333;
+    background-color: #ED1C24;
+    color: #FFFFFF;
     border: 1px solid transparent;
 }
 
 button:hover {
-    background-color: coral;
     cursor: pointer;
 }
 
 button.switch {
-    background-color: rgb(235, 235, 235);
+    background-color: #59CBE8;
     border-color: #333;
-}
-
-button.switch:hover {
-    background-color: #333;
-    color: rgb(235, 235, 235)
 }
 
 h3{
@@ -134,6 +112,11 @@ h1{
     color: #191919;
     font-size: 64px;
     margin: 0;
+    margin-left: 133px;
+}
+
+h1.switch{
+    color: #FFFFFF;
 }
 
 h2{
@@ -141,6 +124,11 @@ h2{
     font-size: 18px;
     margin: 0;
     margin-bottom: 30px;
+    margin-left: 133px;
+}
+
+h2.switch{
+    color: #FFFFFF;
 }
 
 section{
