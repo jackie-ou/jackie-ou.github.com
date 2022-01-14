@@ -1,0 +1,5 @@
+/*
+capture doms
+
+add event listener for 
+*/
