@@ -7,8 +7,10 @@
     const volLevel = document.querySelector('#volumeLevel');
     const sourceMP4 = document.querySelector('#mp4');
     const sourceWEBM = document.querySelector('#webm'); 
+    const msg = document.querySelector('#msg');
     let playing = false;
     let eng = false;
+    myVideo.volume = 0.1;
 
     playToggle.addEventListener('click', function(){
         if(!playing){
@@ -41,6 +43,10 @@
         console.log('volume is ' + myVideo.volume);
     }
 
+    myVideo.addEventListener('playing', function(){
+        msg.style.display = 'none';
+    })
+
     document.addEventListener('keyup', event => {
         if (event.code === 'Space'){
             swapLanguage();
@@ -50,15 +56,15 @@
     function swapLanguage(){
         let time = myVideo.currentTime;
         if(!eng){
-            sourceWEBM.setAttribute('src', 'media/ENG.webm');
             sourceMP4.setAttribute('src', 'media/ENG.mp4');
+            sourceWEBM.setAttribute('src', 'media/ENG.webm');
             myVideo.load();
             myVideo.currentTime = time;
             myVideo.play();
             console.log('swapped to eng');
         } else {
-            sourceWEBM.setAttribute('src', 'media/JPN.webm');
             sourceMP4.setAttribute('src', 'media/JPN.mp4');
+            sourceWEBM.setAttribute('src', 'media/JPN.webm');
             myVideo.load();
             myVideo.currentTime = time;
             myVideo.play();
