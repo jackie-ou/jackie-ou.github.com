@@ -28,8 +28,8 @@ i {
     border: 0;
     border-radius: 7px;
     text-align: center;
-    background-color: black;
-    color: antiquewhite;
+    color: white;
+    background-color: #FD4D65;
 }
 
 i:hover,
@@ -44,6 +44,52 @@ input {
     font-size: 50px;
     padding: 20px;
     background-color: #FD4D65;
-    color: #387C81;
+    color: white;
     border-radius: 15px;
+}
+
+#art{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    padding: 10px;
+    background-color: #FD4D65;
+    color: white;
+    border-radius: 15px;
+    font-size: 22px;
+    border: 0;
+    z-index: 1;
+}
+
+#art:hover{
+    cursor: pointer;
+}
+
+#song{
+    position: absolute;
+    top: 120px;
+    left: 40px;
+    padding: 10px;
+    background-color: #FD4D65;
+    color: white;
+    border-radius: 15px;
+    font-size: 22px;
+    border: 0;
+    z-index: 1;
+}
+
+#song:hover{
+    cursor: pointer;
+}
+
+a:link {
+    color: #fff;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #fff;
+    background-color: transparent;
+    text-decoration: none;
 }
