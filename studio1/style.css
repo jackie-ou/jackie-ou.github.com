@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: 'Tuffy Bold', arial;
+}
+
+#myVideo {
+    display: block;
+    width: 100%;
+    /* max-width: 1366px; */
+    margin: auto;
+}
+
+#controls {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+}
+
+i {
+    width: 48px;
+    padding: 12px;
+    border: 0;
+    border-radius: 7px;
+    text-align: center;
+    color: white;
+    background-color: #FD4D65;
+}
+
+i:hover,
+input {
+    cursor: pointer;
+}
+
+#msg{
+    position: absolute;
+    left: 25%;
+    top: 45%;
+    font-size: 50px;
+    padding: 20px;
+    background-color: #FD4D65;
+    color: white;
+    border-radius: 15px;
+}
+
+#art{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    padding: 10px;
+    background-color: #FD4D65;
+    color: white;
+    border-radius: 15px;
+    font-size: 22px;
+    border: 0;
+    z-index: 1;
+}
+
+#art:hover{
+    cursor: pointer;
+}
+
+#song{
+    position: absolute;
+    top: 120px;
+    left: 40px;
+    padding: 10px;
+    background-color: #FD4D65;
+    color: white;
+    border-radius: 15px;
+    font-size: 22px;
+    border: 0;
+    z-index: 1;
+}
+
+#song:hover{
+    cursor: pointer;
+}
+
+a:link {
+    color: #fff;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #fff;
+    background-color: transparent;
+    text-decoration: none;
+}
