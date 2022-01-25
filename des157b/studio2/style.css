@@ -1,94 +1,50 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body{
+    background: #707070;
 }
 
-body {
-    background-color: black;
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#laptop{
+    width: 1257px;
+    height: 707px;
+    background: #1f1f1f;
+}
+
+#screen{
+    position: relative;
+    width: 1067px;
+    height: 600px;
+    background: #414141;
+    top: 54px;
+    left: 95px;
+}
+
+#keyboard{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #1f1f1f;
+}
+
+.keys{
     font-family: 'Tuffy Bold', arial;
-}
-
-#myVideo {
-    display: block;
-    width: 100%;
-    margin: auto;
-}
-
-#controls {
-    position: absolute;
-    bottom: 10%;
-    right: 10%;
-}
-
-i {
-    width: 48px;
-    padding: 12px;
-    border: 0;
-    border-radius: 7px;
+    color: aqua;
+    background-color: black;
+    box-shadow: 0px 5px 5px black;
     text-align: center;
-    color: white;
-    background-color: #FD4D65;
-}
-
-i:hover,
-input {
-    cursor: pointer;
-}
-
-#msg{
-    position: absolute;
-    left: 25%;
-    top: 45%;
-    font-size: 50px;
-    padding: 20px;
-    background-color: #FD4D65;
-    color: white;
-    border-radius: 15px;
-}
-
-#art{
-    position: absolute;
-    top: 40px;
-    left: 40px;
-    padding: 10px;
-    background-color: #FD4D65;
-    color: white;
-    border-radius: 15px;
-    font-size: 22px;
-    border: 0;
-    z-index: 1;
-}
-
-#art:hover{
-    cursor: pointer;
-}
-
-#song{
-    position: absolute;
-    top: 120px;
-    left: 40px;
-    padding: 10px;
-    background-color: #FD4D65;
-    color: white;
-    border-radius: 15px;
-    font-size: 22px;
-    border: 0;
-    z-index: 1;
-}
-
-#song:hover{
-    cursor: pointer;
-}
-
-a:link {
-    color: #fff;
-    background-color: transparent;
-    text-decoration: none;
-}
-
-a:visited {
-    color: #fff;
-    background-color: transparent;
-    text-decoration: none;
+    font-size: 1.3em;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    width: 30px;
 }
