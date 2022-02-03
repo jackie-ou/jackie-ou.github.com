@@ -1,0 +1,36 @@
+body{
+    color: white;
+}
+
+.center-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.lyrics{
+    font-family: Sansation;
+    width: 400px;
+    /* text-align: center; */
+    font-size: 24px;
+}
+
+.vertical{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#title{
+    font-size: 100px;
+    font-family: Sansation;
+}
+
+img{
+    width: 448px;
+}
