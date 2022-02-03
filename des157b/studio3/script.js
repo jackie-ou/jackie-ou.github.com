@@ -52,7 +52,7 @@ var myFullpage = new fullpage('#fullpage', {
 	responsiveWidth: 0,
 	responsiveHeight: 0,
 	responsiveSlides: false,
-	parallax: true,
+	parallax: false,
 	parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
 	dropEffect: false,
 	dropEffectOptions: { speed: 2300, color: '#F82F4D', zIndex: 9999},
@@ -77,3 +77,11 @@ var myFullpage = new fullpage('#fullpage', {
 	afterSlideLoad: function(section, origin, destination, direction){},
 	onSlideLeave: function(section, origin, destination, direction){}
 });
+
+console.log('here');
+let b = baffle('.lyrics');
+window.addEventListener('hashchange',function(){
+	console.log('scroll detected');
+	b.start();
+	b.reveal(1000);
+})

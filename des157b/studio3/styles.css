@@ -26,6 +26,12 @@ body{
     justify-content: center;
 }
 
+.lyric-vertical{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 #title{
     font-size: 100px;
     font-family: Sansation;
@@ -33,4 +39,8 @@ body{
 
 img{
     width: 448px;
+}
+
+span{
+    background-color: white !important;
 }
