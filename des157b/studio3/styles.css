@@ -105,10 +105,12 @@ a:link {
     color: #fff;
     background-color: transparent;
     text-decoration: none;
+    font-family: Sansation;
 }
 
 a:visited {
     color: #fff;
     background-color: transparent;
     text-decoration: none;
+    font-family: Sansation;
 }
