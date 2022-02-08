@@ -79,9 +79,21 @@ var myFullpage = new fullpage('#fullpage', {
 });
 
 console.log('here');
-let b = baffle('.lyrics');
+let a = baffle(".title");
+let b = baffle(".subtitle");
+let c = baffle('.lyrics');
+
+a.start();
+b.start();
+a.reveal(1000);
+b.reveal(1000);
+
 window.addEventListener('hashchange',function(){
 	console.log('scroll detected');
+	a.start();
 	b.start();
+	a.reveal(1000);
 	b.reveal(1000);
+	c.start();
+	c.reveal(1000);
 })
