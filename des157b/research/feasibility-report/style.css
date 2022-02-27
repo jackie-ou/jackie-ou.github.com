@@ -1,0 +1,26 @@
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FEC8D8;
+    color: #FFFFFF;
+
+}
+
+p{
+    width: 500px;
+}
+
+div{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #D291BC;
+    width: 900px;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
