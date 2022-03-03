@@ -1,0 +1,28 @@
+h1{
+    text-align: center;
+}
+
+.observations{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+img{
+    width: 600px;
+}
+
+#update{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+p{
+    width: 700px;
+}
+
+body {
+    background-image: linear-gradient(to left, #baffc9, white);
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif
+  }
