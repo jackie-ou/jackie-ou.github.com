@@ -1,0 +1,412 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Spinnaker', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    color: #FFFFFF;
+    background-color: #1D1D1D;
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.5em;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+}
+
+/* Overlay Stuff */
+.hidden{
+    display: none;
+}
+
+.show{
+    display: block;
+    height: 100%;
+}
+
+/* Darren Button Layout*/
+/* Buttons */
+.navigation {
+    width: 100%;
+    padding: 50px 100px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Darren Button Styling*/
+.button {
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    border-style: solid;
+}
+.next {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border-color: white;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 21px;
+}
+
+.back {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 21px;
+}
+
+/* Page 1 */
+#field{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:
+        linear-gradient(
+            rgba(255, 255, 255, 0),
+            rgba(0, 0, 0, 0.5)
+         ),
+        url("images/field.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#prompt{
+    font-size: 48px;
+    width: 553px;
+    margin-bottom: 80px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#start-btn{
+    font-size: 24px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: white solid;
+    cursor: pointer;
+}
+
+#responses{
+    position: absolute;
+    bottom: 23px;
+    color: #FFFFFF;
+    font-family: 'Spinnaker', sans-serif;
+    font-size: 24px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Page 2 */
+#fire{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: 
+        linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+        ),
+        url("images/fire.jpg");
+    background-color: black;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#climateChange{
+    font-size: 48px;
+    width: 553px;
+    text-align: center;
+    color: #EF2929;
+    margin-bottom: 20px;
+}
+
+#information{
+    font-family: 'Spinnaker', sans-serif;
+    font-size: 24px;
+    width: 780px;
+    color: #FFFFFF;
+}
+
+/* Page 3 */
+#heading3{
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px;
+    margin-top: 120px;
+    width: 244px;
+    margin-bottom: 100px;
+}
+
+.instructions3{
+    font-family: 'Spinnaker', sans-serif;
+    font-size: 18px;
+    width: 244px;
+}
+
+#draw{
+    margin-top: 120px;
+    margin-left: 50px;
+}
+
+#clear{
+    font-size: 22px;
+    cursor: pointer;
+    color: lightgray;
+    margin-left: 60px;
+}
+
+#controls{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+#box{
+    display: flex;
+    flex-direction: column;
+}
+
+.dot{
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+#red{
+    background-color: red;
+    cursor: pointer;
+}
+
+#orange{
+    background-color: orange;
+    cursor: pointer;
+}
+
+#yellow{
+    background-color: yellow;
+    cursor: pointer;
+}
+
+#green{
+    background-color: green;
+    cursor: pointer;
+}
+
+#blue{
+    background-color: blue;
+    cursor: pointer;
+}
+
+#purple{
+    background-color: purple;
+    cursor: pointer;
+}
+
+#black{
+    background-color: black;
+    cursor: pointer;
+}
+
+#white{
+    background-color: white;
+    cursor: pointer;
+}
+
+#small{
+    background-color: black;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin-top: 5px;
+}
+
+#medium{
+    background-color: black;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin-top: 2.5px;
+}
+
+#large{
+    background-color: black;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    height: 25px;
+    width: 25px;
+}
+
+#colorsLabel{
+    font-family: 'Spinnaker', sans-serif;
+    margin-top: 2.5px;
+    margin-left: 60px;
+}
+
+#sizeLabel{
+    font-family: 'Spinnaker', sans-serif;
+    margin-top: 2.5px;
+    margin-left: 60px;
+}
+
+/* Page 4 */
+#preview{
+    width: 871px;
+    height: 490px;
+    display: none;
+    z-index: 2;
+}
+
+#heading4{
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px;
+    width: 265px;
+    margin-top: 120px;
+}
+
+#dotted-border{
+    margin-left: 120px;
+    display: flex;
+    margin-top: 120px;
+    border-radius: 45px;
+    width: 50%;
+    height: 50vh;
+    padding: 30px;
+    border: 2px white dashed;
+    background-color: #c4c4c410;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Page 5 */
+#heading5{
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px;
+    width: 406px;
+    margin-top: 175px;
+} 
+
+
+#description{
+    margin-top: 200px;
+    width: 100%;
+    border:0 0 0 3px solid;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-color: white;
+    background-color: transparent;
+    color: #EF2929;
+    font-family: 'Oswald', sans-serif;
+    font-size: 48px;
+    z-index: 0;
+    text-align: center;
+}
+
+#preview2{
+    margin-top: 175px;
+    margin-left: 130px;
+}
+
+/* Page 6 */
+#submission{
+    display: flex;
+    justify-content: center;
+}
+
+#heading6{
+    position: absolute;
+    transform: translate(-50%);
+    left: 50%;
+    top: 50px;
+    color: #FFFFFF;
+    font-size: 36px;
+}
+
+.slideImage {
+    width: 100%;
+    height: 100%;
+}
+
+#takeAction{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    margin-right: 100px;
+    margin-bottom: 62px;
+    background-color: #EF2929;
+    color: #FFFFFF;
+    font-size: 24px;
+    font-family: 'Oswald', sans-serif;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+}
+
+/* Page 7 */
+#pageSevenDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px;
+}
+
+#heading7{
+    margin: 100px;
+}
+
+#actionOne, #actionTwo, #actionThree{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 33px;
+    width: 100%;
+}
+
+.label{
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 47px;
+}
+
+.info{
+    font-family: 'Spinnaker', sans-serif;
+    font-size: 24px;
+}
+
+#restart{
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin: 53px;
+    cursor: pointer;
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- p5 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+    <!-- Back4App -->
+    <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+    <!-- fullPage -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js" integrity="sha512-gSf3NCgs6wWEdztl1e6vUqtRP884ONnCNzCpomdoQ0xXsk06lrxJsR7jX5yM/qAGkPGsps+4bLV5IEjhOZX+gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.css" integrity="sha512-TD/aL30dNLN0VaHVoh9voFlNi7ZuWQYtV4bkIJv2ulZ8mEEkZJ7IyGvDthMKvIUwzLmPONnjQlAi55HTERVXpw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Spinnaker&display=swap" rel="stylesheet">
+    <!-- mine -->
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <title>Climate Change</title>
+</head>
+<body>
+    <!-- Page 1 -->
+    <section id="pageOne" class="show">
+        <div id="field">
+            <h1 id="prompt">What does this scene look like in 50 years?</h1>
+            <button class="button" id="start-btn">Start</button>
+            <p id="responses">View all responses</p>
+        </div>
+    </section>
+
+    <!-- Page 2 -->
+    <section id="pageTwo" class="hidden">
+        <div id="fire">
+            <h1 id="climateChange">Climate Change</h1>
+            <p id="information">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bibendum ac fames urna integer malesuada faucibus neque ut. Ipsum neque amet ante interdum diam senectus sollicitudin. Sagittis quis tristique leo, ornare. Cursus pharetra fames venenatis dui nulla purus vitae proin. In nam amet integer et risus. Donec ipsum non massa lacus, dictum malesuada. Turpis sed porttitor faucibus odio mattis sit urna, augue consequat. Eget amet, odio elementum enim eget ipsum cras tristique. Nec enim faucibus neque tempor proin. Sit nisl, eget faucibus diam eget vitae.</p>
+            <div class="navigation">
+                <button class="button back" id="back2">back</button>
+                <button class="button next" id="next2">next</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 3 -->
+    <section id="pageThree" class="hidden">
+        <div class="flex-container">
+            <div>
+                <h1 id="heading3">With this information about climate change in mind, what do you think this scene looks like in 50 years?</h1>
+                <p class="instructions3">Draw over the photo by clicking and dragging over the photo.</p>
+                <p class="instructions3">Your drawing will be downloaded after hitting "Next".</p>
+            </div>
+            <div id="box">
+                <div id="draw">
+                    <div id="canvas"></div>
+                </div>
+                <div id="controls"> <!--Add download button and don't have Next button trigger-->
+                    <p id="colorsLabel">Colors:</p>
+                    <span class="dot" id="red"></span>
+                    <span class="dot" id="orange"></span>
+                    <span class="dot" id="yellow"></span>
+                    <span class="dot" id="green"></span>
+                    <span class="dot" id="blue"></span>
+                    <span class="dot" id="purple"></span>
+                    <span class="dot" id="black"></span>
+                    <span class="dot" id="white"></span>
+                    <p id="sizeLabel">Size:</p>
+                    <span class="dot" id="small"></span>
+                    <span class="dot" id="medium"></span>
+                    <span class="dot" id="large"></span>
+                    <i class="fa-solid fa-trash-can" id="clear"></i>
+                </div>
+            </div>
+        </div>
+        <div>
+
+        </div>
+        <div class="navigation">
+            <button class="button back" id="back3">back</button>
+            <button class="button next" id="next3">next</button>
+        </div>
+    </section>
+
+    <!-- Page 4 -->
+    <section id="pageFour" class="hidden">
+        <div class="flex-container">
+            <h1 id="heading4">PLEASE UPLOAD THE DOWNLOADED PHOTO HERE.</h1>
+            <div id="dotted-border">
+                <input type="file" id="fileupload">
+                <img id="preview" src="images/empty.jpg"/>
+            </div>
+        </div>
+        <div class="navigation">
+            <button class="button back" id="back4">back</button>
+            <button class="button next"id="next4">next</button>
+        </div>
+    </section>
+
+    <!-- Page 5 -->
+    <section id="pageFive" class="hidden">
+        <!-- TODO: Add image later using Back4App -->
+        <div class='flex-container'>
+            <div>
+                <h1 id="heading5">HOW WOULD YOU DESCRIBE YOUR IMAGE IN ONE WORD?</h1>
+                <input id="description" type="text" name="description" placeholder="Enter word">
+            </div>
+            <img id="preview2" src="images/empty.jpg" width="633px">
+        </div>
+        <div class="navigation">
+            <button class="button back" id="back5">back</button>
+            <button class="button next"id="next5">next</button>
+        </div>
+    </section>
+    <!-- Page 6 (Submission Gallery)-->
+    <section id="pageSix" class="hidden">
+        <h1 id="heading6">Do we want a ______ future?</h1>
+        
+        <div id="fullpage">
+            <div class="section"></div>
+        </div>
+
+        <button class="button" id="takeAction">take action</button>
+    </section>
+
+    <!-- Page 7 (Action)-->
+    <section id="pageSeven" class="hidden">
+        <div id="pageSevenDiv">
+            <h1 id="heading7">What can we do about it</h1> 
+            <div id="actionOne">
+                <img src="/images/empty.jpg" width="386px">
+                <div>
+                    <h2 class="label">Action 1</h2>
+                    <p class="info">Insert a description of Action 1 here</p>
+                </div>
+            </div>
+            <div id="actionTwo">
+                <img src="/images/empty.jpg" width="386px">
+                <div>
+                    <h2 class="label">Action 2</h2>
+                    <p class="info">Insert a description of Action 2 here</p>
+                </div>
+            </div>
+            <div id="actionThree">
+                <img src="/images/empty.jpg" width="386px">
+                <div>
+                    <h2 class="label">Action 3</h2>
+                    <p class="info">Insert a description of Action 3 here</p>
+                </div>
+            </div>
+            <i class="fa-solid fa-arrow-rotate-right" id="restart"></i>
+        </div>
+    </section>
+</body>
+</html>
